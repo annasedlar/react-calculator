@@ -30,6 +30,21 @@ const reducer = (state = initialState, action) => {
           $set: action.payload
         }
     })
+    case 'CLEAR_CLICKED':
+        return update(state, {
+          operator: {
+            $set: ""
+          },
+          firstNumberArray: {
+            $set: []
+          },
+          secondNumberArray: {
+            $set: []
+          },
+          total: {
+            $set: 0
+          }
+    })
     case 'EQUALS':
       return update(state, {
         operator: {
@@ -43,6 +58,39 @@ const reducer = (state = initialState, action) => {
         }
     })
     case 'DISPLAY_TOTAL':
+      if (action.payload === "=") {
+        let firstNumber = Number(state.firstNumberArray.join(""));
+        let secondNumber = Number(state.secondNumberArray.join(""));
+        if(state.operator === "+"){
+          return update(state, {
+            total: {
+              $set: firstNumber + secondNumber
+            }
+          })
+        } else if (state.operator === "-") {
+          return update(state, {
+            total: {
+              $set: firstNumber - secondNumber
+            }
+          })
+        } else if (state.operator === "%") {
+          return update(state, {
+            total: {
+              $set: firstNumber / secondNumber
+            }
+          })
+        } else if (state.operator === "x") {
+          return update(state, {
+            total: {
+              $set: firstNumber * secondNumber
+            }
+          })
+        } else {
+          return {
+            state
+          }
+        }
+      }
       return {
         ...state,
         total: action.payload

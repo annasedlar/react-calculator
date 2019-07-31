@@ -27,7 +27,7 @@ class ButtonRow extends Component {
       </div>
       <div className="button-row">
         <Button key={0} value={0}>0</Button>
-        <Button key={"."} value={"."}>.</Button>
+        <Button key={"clear"} value={"clear"}>clear</Button>
         <Button key={"-"} value={"-"} type={"operator"}>-</Button>
       </div>
       <div className="button-row">

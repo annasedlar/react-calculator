@@ -25,3 +25,10 @@ export function clickOperator(payload) {
     payload,
   };
 }
+
+export function clear(payload) {
+  return {
+    type: "CLEAR_CLICKED",
+    payload,
+  };
+}
