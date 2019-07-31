@@ -10,8 +10,30 @@
 }
 
 .calculator { 
-  height: 200px;
-  width: 100px;
+  height: 600px;
+  width: 400px;
   border: 1px solid white; 
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.display {
+  border: 1px solid white;
+  text-align: right;
+  height: 50px;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+}
+
+.button {
+  /* background-color: lightgrey;
+  height: 50px;
+  width: 50px; */
 }

@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
 
 class Display extends Component {
-
   render() {
+    const { total } = this.props;
+    console.log(this.props.total);
     return (
-      <div>
-        Display
+      <div className="display">
+        { total }
       </div>
     )
   }
 }
 
-export default Display;
+const mapStateToProps = (state) => ({
+  total: state.displayTotal.total,
+});
+
+export default connect(mapStateToProps, null)(Display);
