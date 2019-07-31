@@ -1,5 +1,6 @@
 # React Calculator
 
+![Calculator Demo](calc.gif)
 
 ## To Run: 
 To run, install dependencies: `npm install/yarn add`

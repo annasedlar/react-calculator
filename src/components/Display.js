@@ -5,7 +5,6 @@ import '../App.css';
 class Display extends Component {
   render() {
     const { total } = this.props;
-    console.log(this.props);
     return (
       <div className="display">
         { total }
