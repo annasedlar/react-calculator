@@ -5,6 +5,8 @@
 </div>
 
 ## To Run: 
+This app was scaffolded with [create-react-app](https://github.com/facebook/create-react-app).
+
 To run, install dependencies: `npm install/yarn add`
 start server: `npm start/yarn start`
 
