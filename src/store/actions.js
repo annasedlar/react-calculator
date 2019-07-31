@@ -4,3 +4,24 @@ export function displayTotal(payload) {
     payload,
   };
 }
+
+export function equals(payload) {
+  return {
+    type: "EQUALS",
+    payload,
+  };
+}
+
+export function clickNumber(payload) {
+  return {
+    type: "CLICK_NUMBER",
+    payload,
+  };
+}
+
+export function clickOperator(payload) {
+  return {
+    type: "CLICK_OPERATOR",
+    payload,
+  };
+}

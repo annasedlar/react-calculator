@@ -5,7 +5,6 @@ import '../App.css';
 class Display extends Component {
   render() {
     const { total } = this.props;
-    console.log(this.props.total);
     return (
       <div className="display">
         { total }
@@ -15,7 +14,7 @@ class Display extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  total: state.displayTotal.total,
+  total: state.total,
 });
 
 export default connect(mapStateToProps, null)(Display);
