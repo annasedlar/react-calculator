@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Calculator
 
-## Available Scripts
 
-In the project directory, you can run:
+## To Run: 
+To run, install dependencies: `npm install/yarn add`
+start server: `npm start/yarn start`
 
-### `npm start`
+## Tests: 
+I ran out of time before I was able to write tests, which is a shame because there definitely are some calculation bugs. I am most familiar with integration testing with [cypress.io](https://www.cypress.io/) but am familiar with unit testing as well. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features: 
+I ran out of time before I was able to get this project looking/functioning exactly how I would like. I spent too much time on the styling initially, but moved on to functionality before I got the buttons spaced correctly with flexbox. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+I used [`immutability-helper`](https://github.com/kolodny/immutability-helper) within my Redux store to ensure data immutability and ease of working with nested data.
 
-### `npm test`
+If I had more time, I would refactor how I am currently storing button presses. Currently, each button press is stored in one of two arrays, which represent each number upon which the operator should operate (to ensure you can add nultiple-digit numbers). There is currently no way to use the total from one operation as the first number in a new operation, which I would have liked to code, but ran out of time. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I would have liked to map through an array of digits in `ButtonRow.js` to build the buttons instead of imperatively setting each digit.
 
-### `npm run build`
+And lastly, currently the separation of stateful and stateless components is hardly existant. `Button` should ideally not be concerned with state at all, and be purely a presentational ("dumb") component. I would have liked `Button` to be a functional component in this case as well. 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thanks for your consideration. There were many optimizations I wish I could have made (and tests!) but as I was already a bit over the 2 hour limit, this was what I finished with!
