@@ -1,4 +1,3 @@
-// import { combineReducers } from 'redux';
 import update from 'immutability-helper';
 
 const initialState = {

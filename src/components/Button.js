@@ -30,12 +30,6 @@ class Button extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return  ({
-    state
-  })
-}
-
 const mapDispatchToProps = dispatch => ({
   displayTotal: payload => dispatch(displayTotal(payload)),
   equals: payload => dispatch(equals(payload)),
@@ -44,4 +38,4 @@ const mapDispatchToProps = dispatch => ({
   clear: () => dispatch(clear())
 });
 
-export default connect( mapStateToProps, mapDispatchToProps)(Button);
+export default connect(null, mapDispatchToProps)(Button);

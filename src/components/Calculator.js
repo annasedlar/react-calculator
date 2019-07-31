@@ -5,7 +5,6 @@ import '../App.css';
 
 class Calculator extends Component {
   
-
   render() {
     return (
       <div className="calculator">
