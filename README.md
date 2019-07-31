@@ -1,6 +1,8 @@
 # React Calculator
 
-![Calculator Demo](calc.gif)
+<div align="center">
+  <img src="calc.gif" alt="Calculator Demo" width="400"/>
+</div>
 
 ## To Run: 
 To run, install dependencies: `npm install/yarn add`
